@@ -1,0 +1,1079 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- <link rel="stylesheet" href="fitness.css"> -->
+</head>
+<style>
+
+     *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    color: white;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 80px;
+    width: 100%;
+    background-color: #000000;
+    padding: 0 5%;
+}
+.Royal {
+    font-size: 2vw;
+    font-weight: bold;
+    color: #ffffff;
+    align-items: center;
+}
+.Royal span{
+    color: #18cb47;
+}
+    /* .link{
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    }
+.link a {
+    font-size: 1.26vw;
+    text-decoration: none;
+    color: #cb8047;
+} */
+.link {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .link a {
+            position: relative;
+            font-size: 1.26vw;
+            text-decoration: none;
+            color: #cccccc;
+            transition: 0.3s;
+        }
+
+        .link a:hover {
+            color: #18cb47
+        }
+
+        .link a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: #18cb47;
+            left: 0;
+            bottom: -7px;
+            transition: 0.3s;
+        }
+
+        .link a:hover::after {
+            width: 100%;
+        }
+
+.btn{
+    margin-left: 50px;
+}
+.btn button {
+
+     height: 38px;
+    width: 90px;
+    border: 1px solid #367236;
+    outline: none;
+    font-size: 17px;
+    border-radius: 9px;
+    color: #18cb47;
+    background-color: #000;
+}
+.icons{
+    display: none;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 710px;
+    min-height: 40vh;
+}
+.hero-content{
+    margin-top: 10px;
+    margin: 10px;
+    align-items: center;
+}
+.hero-content h3{
+margin-top: 5px;
+    margin-left: 8px;
+    font-size: 21px;
+    font-weight: 200;
+}
+.hero-content h1{
+   
+        font-size: 63px;
+    font-weight: 600;
+    margin: 20px 8px;
+}
+.hero-content h1 span{
+    color: #18cb47;
+}
+.hero-content p{
+    font-size: 22px;
+    margin: 9px 9px;
+}
+
+.hero-content button {
+    height: 48px;
+    padding: 0 25px;
+    margin: 15px 12px 0 0;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    text-transform: uppercase;
+}
+
+#join {
+    background: #18cb47;
+    color: #000;
+    border: 2px solid #18cb47;
+    box-shadow: 0 0 12px #18cb4740;
+}
+
+#join:hover {
+    background: transparent;
+    color: #18cb47;
+    transform: translateY(-4px);
+    box-shadow: 0 0 22px #18cb4770;
+}
+
+#explore {
+    background: transparent;
+    color: white;
+    border: 2px solid #18cb47;
+}
+
+#explore:hover {
+    background: #18cb47;
+    color: #000;
+    transform: translateY(-4px);
+    box-shadow: 0 0 22px #18cb4770;
+}
+
+
+.mission {
+    margin-top: -25px;
+    padding: 25px;
+    border-left: 4px solid #18cb47;
+    max-width: 400px;
+}
+
+.mission h3 {
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin: 0 0 15px 0;
+    color: white;
+}
+
+.mission h3 span {
+    color: #18cb47;
+}
+
+.mission p {
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 1.8;
+    margin: 0;
+    color: #ccc;
+}
+
+
+
+.service {
+     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 30px;
+}
+
+.service h1 {
+    font-size: 41px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.service h1 span{
+    color: #18cb47;
+}
+ .service .image {
+    width: 520px;
+    padding: 12px;
+    background: #222;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.image img {
+    width: 95%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    
+}
+
+.image p {
+    margin-top: 12px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.image:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-inline: 216px;
+    border: 1px solid black;
+    
+}
+.us h1{
+    margin-top: 14px;
+    margin-bottom: 15px;
+    font-size: 50px;
+    text-align: center;
+    width: 100%;
+    font-weight: 900;
+}
+.us h1 span{
+    color: #18cb47;
+}
+.about .choose{
+    width: 500px;
+    padding: 10px;
+    background: #000;
+    
+}
+.about img{
+    height: 420px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.why h3{
+    font-size: 49px;
+    font-weight: 800;
+    margin: 9px 0 25px 120px;
+}
+.why p{
+    font-size: 23px;
+    margin: 8px 0 0 120px ;
+    /* text-align: center; */
+}
+
+.plans {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    align-items: center;
+    gap: 40px;
+    margin-inline: 200px;
+
+}
+.plans h1 {
+    font-size: 41px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.plans h1 span{
+    color: #18cb47;
+}
+.rupee{
+    height: 260px;
+    width: 375px;
+    border: 1px solid #18cb47;
+    border-radius: 7px;
+    text-align: center;
+    
+}
+
+.rupee ul {
+    list-style-position: inside;
+    padding-left: 0;
+    text-align: center;
+}
+.rupee {
+    padding: 15px;
+    transition: 0.3s;
+}
+
+.rupee:hover {
+    box-shadow: 0 0 15px #18cb47;
+    transform: translateY(-5px);
+}
+
+.rupee h2 {
+    margin-bottom: 15px;
+}
+.rupee h2 span{
+    color: #18cb47;
+}
+.rupee ul {
+    line-height: 2;
+    margin-bottom: 15px;
+}
+
+.rupee a {
+    /* display: inline-block; */
+    margin-top: 5px;
+}
+
+.reviews h1{
+    margin: 25px 0 25px 0;
+    font-size: 41px;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+.reviews h1 span{
+    color: #18cb47;
+}
+
+.review-box {
+    width: 547px;
+    /* margin-top: 15px; */
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #18cb47;
+    border-radius: 7px;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+.review-box img {
+    width: 65px;
+    height: 96px;
+    border-radius: 55%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.review-box h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.review-box .stars {
+    font-size:27px;
+    gap: 5px;
+    color: rgb(186, 133, 23);
+    margin-bottom: 15px;
+}
+
+.review-box p {
+    font-size: 21px;
+    line-height: .7;
+    margin-bottom: 15px;
+}
+
+.review-box button {
+    padding: 10px 20px;
+    background: #18cb47;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+     /* margin-top: 10px;
+    margin-left: 790px; */
+}
+
+
+.butn{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-top: 10px;
+    margin-left: 790px;
+}
+.butn button {
+    height: 48px;
+    padding: 0 25px;
+    margin: 15px 12px 0 0;
+    font-size: 15px;
+    /* text-align: center;
+    align-items: center; */
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    text-transform: uppercase;
+}
+
+#prev {
+    background: #18cb47;
+    color: #000;
+    border: 2px solid #18cb47;
+    box-shadow: 0 0 12px #18cb4740;
+}
+
+#prev:hover {
+    background: transparent;
+    color: #18cb47;
+    transform: translateY(-4px);
+    box-shadow: 0 0 22px #18cb4770;
+}
+
+#next {
+    background: transparent;
+    color: white;
+    border: 2px solid #18cb47;
+}
+
+#next:hover {
+    background: #18cb47;
+    color: #000;
+    transform: translateY(-4px);
+    box-shadow: 0 0 22px #18cb4770;
+}
+
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    padding: 70px 10%;
+    background: #080808;
+    color: white;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.contact-info h1 span {
+    color: #18cb47;
+}
+
+.contact-info p {
+    color: #aaa;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    max-width: 400px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 22px 0;
+    color: #ddd;
+}
+
+.info i {
+    color: #18cb47;
+    font-size: 20px;
+    width: 25px;
+}
+
+.contact-info h3 {
+    margin-top: 35px;
+    letter-spacing: 2px;
+}
+
+.social {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social a {
+    height: 45px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #18cb47;
+    border-radius: 50%;
+    color: #18cb47;
+    font-size: 19px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social a:hover {
+    background: #18cb47;
+    color: black;
+    transform: translateY(-5px);
+}
+
+.contact-form {
+    flex: 1;
+    max-width: 500px;
+    padding-left: 35px;
+    border-left: 2px solid #18cb47;
+}
+
+.contact-form h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    background: #151515;
+    color: white;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+/* .contact-form input:focus,
+.contact-form textarea:focus {
+    border-bottom-color: #18cb47;
+} */
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    padding: 14px 20px;
+    background: #18cb47;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    align-self: flex-start;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: white;
+}
+
+
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 600px) {
+    nav {
+        justify-content: space-between;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .Royal {
+        font-size: 24px;
+    }
+
+    .link {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+        /* order: 3; */
+    }
+
+    .link a {
+        font-size: 14px;
+    }
+
+    .btn {
+        margin: 0;
+    }
+
+    .btn button {
+        width: 75px;
+        height: 34px;
+        font-size: 14px;
+    }
+
+    .icons {
+        display: none;
+    }
+
+    .header {
+        min-height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        padding: 35px 20px;
+    }
+
+    .hero-content {
+        margin: 0;
+        width: 100%;
+    }
+
+    .hero-content h3 {
+        font-size: 13px;
+        margin-left: 0;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(38px, 10vw, 52px);
+        margin: 18px 0;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+        line-height: 1.7;
+        margin: 0;
+    }
+
+    .hero-content p br {
+        display: none;
+    }
+
+    .hero-content button {
+        padding: 0 14px;
+        font-size: 12px;
+        margin-top: 18px;
+    }
+
+    .mission {
+        margin-top: 0;
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .mission h3 {
+        font-size: 30px;
+    }
+
+    .mission p {
+        font-size: 14px;
+    }
+
+    .mission p br {
+        display: none;
+    }
+
+    .service {
+        padding: 25px 15px;
+        gap: 15px;
+    }
+
+    .service h1,
+    .plans h1,
+    .reviews h1 {
+        font-size: 32px;
+    }
+
+    .service .image {
+        width: 100%;
+    }
+
+    .image img {
+        width: 100%;
+        height: 230px;
+    }
+
+    .about {
+        flex-direction: column;
+        margin-inline: 15px;
+        gap: 20px;
+    }
+
+    .about .choose {
+        width: 100%;
+        padding: 0;
+    }
+
+    .about img {
+        width: 100%;
+        height: 280px;
+    }
+
+    .us h1 {
+        font-size: 35px;
+    }
+
+    .why h3 {
+        font-size: 29px;
+        margin: 10px 0 15px;
+    }
+
+    .why p {
+        font-size: 15px;
+        line-height: 1.8;
+        margin-bottom: 20px;
+    }
+
+    .plans {
+        margin: 0;
+        padding: 20px 15px;
+        gap: 20px;
+    }
+
+    .rupee {
+        width: 100%;
+        height: auto;
+        min-height: 240px;
+    }
+
+    .review-box {
+        width: calc(100% - 30px);
+        padding: 20px 12px;
+    }
+
+    .review-box img {
+        width: 75px;
+        height: 75px;
+    }
+
+    .review-box h2 {
+        font-size: 25px;
+    }
+
+    .review-box .stars {
+        font-size: 23px;
+    }
+
+    .review-box p {
+        font-size: 16px;
+        line-height: 1.5;
+        overflow-wrap: anywhere;
+    }
+
+    .butn {
+        justify-content: center;
+        gap: 15px;
+        margin: 15px auto 30px;
+    }
+
+    .butn button {
+        height: 42px;
+        padding: 0 18px;
+        font-size: 13px;
+        margin: 0;
+    }
+
+    .contact {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 35px;
+        padding: 40px 20px;
+    }
+
+    .contact-info h1 {
+        font-size: 32px;
+    }
+
+    .contact-info p {
+        font-size: 14px;
+    }
+
+    .contact-form {
+        width: 100%;
+        max-width: none;
+        padding: 25px 0 0;
+        border-left: none;
+        border-top: 2px solid #18cb47;
+    }
+
+    .contact-form h2 {
+        font-size: 24px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px;
+    }
+}
+
+/* EXTRA SMALL MOBILE */
+
+
+
+
+
+
+
+</style>
+<body>
+    <main>
+    <nav>
+        <h1 class="Royal">Royal  <span>  Fitness</span></h1>
+        <div class="link">
+    <a href="#home">Home</a>
+    <a href="#service">Service</a>
+    <a href="#about">About Us</a>
+    <a href="#membership">Membership</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+</div>
+        
+        <div class="btn">
+            <button>Join Us</button>
+        </div>
+         <div class="icons">
+             <i class="fa-solid fa-phone"></i>
+            <i class="fa-solid fa-bars"></i>
+         </div>
+    </nav>
+    <div class="header" id="home">
+        <div class="hero-content">
+        <h3>DISCIPLINE / STRENGTH / CONSISTENCY</h3>
+        <h1>BUILD A <BR> <span>STRONGER</span>  You</h1>
+        <p>Transform your body,boost your confidence and <br> become the best version of yourself with Royal Fitness</p>
+
+        <button id="join">Join Now</button>
+        <button id="explore">Explore Program</button>
+        </div>
+         <div class="mission">
+            <h3>Your Goals. <br><span>Our Mission</span></h3>
+            <p>Modern equipments.expert trainers <br>and a support environment to help you <br> achieve your fitness goal.</p>
+         </div>
+    </div>
+    <div class="service" id="service">
+        <h1>Our <span> Services </span>
+        </h1>
+        <div class="image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0yoGjVQ0-BsW13tu6PwfJhdEX7-upr_cRL7Egj0tdvyp2eFJ-9ZO5Ed9-&s=10" alt="">
+            <p>Running</p>
+        </div>
+        <div class="image">
+            <img src="https://www.advantiahealth.com/wp-content/uploads/2024/12/Strength-Training-for-Women-Square.webp">
+            <p>Fat Loss</p>
+        </div>
+        <div class="image">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/muscular-men-drink-his-nutritional-supplement-royalty-free-image-856682612-1549062204.jpg?crop=0.670xw:1.00xh;0,0&resize=640:*">
+            <p>Fat Gain</p>
+        </div>
+        <div class="image">
+            <img src="https://stylehislife.com/wp-content/uploads/2026/09/Man-doing-incline-bench-press-in-the-gym-1024x571.jpg">
+            <p>Physical Fitness</p>
+        </div>
+        <div class="image">
+            <img src="https://10fitness.com/wp-content/uploads/2025/08/img-3335_1840d1a004269519fbac963c45d15ed8_2000.jpeg">
+            <p>Strength Training</p>
+        </div>
+        <div class="image">
+            <img src="https://cdn.shopify.com/s/files/1/0844/0751/7479/files/How_Meditation_Supports_Physical_Fitness_and_Mental_Health.jpg?v=1775199405">
+            <p>Mind Relax</p>
+        </div>
+        <!-- <div class="image">
+            <img src="https://www.ritfitsports.com/cdn/shop/articles/bench-shoulder-exercises-you-can-do-807541_69c1ab89-1d91-4684-ad6b-f23202da8ff7.jpg?v=1779153747&width=2048">
+            <p>Shoulder Workout</p>
+        </div> -->
+    </div>
+    <div class="us" id="about">
+        <h1>About <span>Us</span></h1>
+    </div>
+    <div class="about">
+        <div class="choose">
+            <img src="https://www.bollywoodhungama.com/wp-content/uploads/2021/07/Salman-Khan-hits-the-gym-to-pump-up-his-muscles-for-Tiger-3-watch-video-.jpg">
+        </div>
+        <div class="why">
+            <h3>Why Choose Us?</h3>
+            <p>Our diverse membership base creates a friendly and <br>supportive atmosphere.where you can make friends and stay motivated <br> <br> 
+                Unlock your potential with our expert personal trainers. <br> Elevate your fitness with practice session. <br> <br> We provide supportive management,for your fitness success</p>
+
+        </div>
+    </div>
+    <div class="plans" id="membership">
+        <h1>Our <span>Plans</span></h1>
+        <div class="rupee">
+            <h2>BASIC <BR><span>$10/Month</span></BR></h2>
+            <ul>
+                <li>Smart workout plan</li>
+                <li>At home workout</li>
+            </ul>
+            <a href="#">Join Now -></a>
+        </div>
+        <div class="rupee">
+            <h2>PRO <br> <span>$40/Month</span></h2>
+            <ul>
+                <li>Pro GYMS</li>
+                <li>Samrt workout plan</li>
+                <li>At home workouts</li>
+            </ul>
+            <a href="#">Join Now -></a>
+        </div>
+        <div class="rupee">
+            <h2>PREMIUM <br> <span>$80/Month</span></h2>
+            <ul>
+                <li>ELITE Gyms & Classes</li>
+                <li>Pro Gyms</li>
+                <li>Smart workout plan</li>
+                <li>Personal Training</li>
+            </ul>
+            <a href="#">Join Now -></a>
+        </div>
+    </div>
+    <div class="reviews" id="reviews">
+    <h1>Customer <span>Reviews</span></h1>
+    <div class="review-box"></div>
+</div>
+<div class="butn">
+    <button id="prev">Prev</button>
+    <button id="next">Next</button>
+</div>
+
+
+<div class="contact" id="contact">
+    <div class="contact-info">
+        <h1>GET IN <span>TOUCH</span></h1>
+        <p>Have questions about our membership or training plans? Contact us today.</p>
+
+        <div class="info">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Royal Fitness, Gurgaon</span>
+        </div>
+
+        <div class="info">
+            <i class="fa-solid fa-phone"></i>
+            <span>+91 98765 43210</span>
+        </div>
+
+        <div class="info">
+            <i class="fa-solid fa-envelope"></i>
+            <span>royalfitness@email.com</span>
+        </div>
+
+        <h3>FOLLOW US</h3>
+
+        <div class="social">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <!-- <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a> -->
+        </div>
+    </div>
+
+    <div class="contact-form">
+        <h2>Send Us a Message</h2>
+
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="text" placeholder="Subject" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+
+            <button type="submit">Send Message <i class="fa-solid fa-arrow-right"></i></button>
+        </form>
+    </div>
+</div>
+
+
+
+
+    </main>
+
+    <script>
+
+        const prev = document.querySelector('#prev')
+        const next = document.querySelector('#next')
+        // const all = document.querySelector('.link a')
+
+
+        let customer = [
+            {
+                name:"Salman khan",
+                image:"https://m.media-amazon.com/images/I/41nBFYfIsdL._AC_UF894,1000_QL80_.jpg",
+                stars: "*****",
+                review:"Bishnoi tujhe kutta nhi banaya na.."
+            },
+            {
+                name:"Rahul gandhi",
+                image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Xvxb8XI01CewPl38T_4bpBU0Gudp7AlJaBtLI3WlbfQWcPAS3sNR6WiA&s=10",
+                stars:"*****",
+                review: "Vote chor gaddi chor.."
+            },
+            {
+                name:"Narendra modi",
+                image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe1vpHpYrMmz8Na9FjxzIjr5lD0bErhdEZyrI96sRjY2PTbtohGk8qKBXr&s=10",
+                stars:"*****",
+                review:"Kon rahul.."
+            }
+        ]
+
+
+ 
+
+const all = document.querySelectorAll('.link a');
+
+all.forEach(function(link) {
+    link.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        const section = document.querySelector(link.getAttribute('href'));
+
+        section.scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+        let currentCustomerIndex = 0;
+        let box = document.querySelector('.review-box')
+
+        function showCustomer(){
+            box.innerHTML =`<img src="${customer[currentCustomerIndex].image}" alt="">
+            <h2>${customer[currentCustomerIndex].name}</h2>
+            <div class="stars">${customer[currentCustomerIndex].stars}</div>
+                <p>${customer[currentCustomerIndex].review}</p>`
+
+                    if(currentCustomerIndex === 0){
+                        prev.style.display ="none"
+                    }else{
+                        prev.style.display="block"
+                    }
+        }
+
+        next.addEventListener('click',function(){
+            currentCustomerIndex++
+            showCustomer()
+        })
+        prev.addEventListener('click',function(){
+           
+            currentCustomerIndex--
+            showCustomer()
+        })
+        showCustomer()
+
+
+
+    </script>
+</body>
+</html>
