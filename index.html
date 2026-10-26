@@ -41,16 +41,7 @@ nav{
 .Royal span{
     color: #18cb47;
 }
-    /* .link{
-    display: flex;
-    align-items: center;
-    gap: 35px;
-    }
-.link a {
-    font-size: 1.26vw;
-    text-decoration: none;
-    color: #cb8047;
-} */
+
 .link {
             display: flex;
             align-items: center;
@@ -101,6 +92,45 @@ nav{
 .icons{
     display: none;
 }
+
+
+
+.chotu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 15px;
+    width: 180px;
+    padding: 15px;
+    background-color: #151515;
+    border: 1px solid #18cb47;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px #18cb4730;
+    z-index: 1000;
+}
+
+.chotu a {
+    display: block;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 12px 10px;
+    color: white;
+    border-bottom: 1px solid #333;
+}
+
+.chotu a:last-child {
+    border-bottom: none;
+}
+
+.chotu a:hover {
+    color: #18cb47;
+    background-color: #222;
+}
+
+.icons {
+    display: none;
+}
+
 
 .header{
     display: flex;
@@ -568,10 +598,7 @@ margin-top: 5px;
     font-family: inherit;
 }
 
-/* .contact-form input:focus,
-.contact-form textarea:focus {
-    border-bottom-color: #18cb47;
-} */
+
 
 .contact-form textarea {
     resize: vertical;
@@ -596,7 +623,7 @@ margin-top: 5px;
 
 
 /* MOBILE RESPONSIVE */
-@media (max-width: 600px) {
+@media (max-width: 650px) {
     nav {
         justify-content: space-between;
         padding: 15px;
@@ -612,11 +639,12 @@ margin-top: 5px;
         justify-content: center;
         flex-wrap: wrap;
         gap: 12px 18px;
-        /* order: 3; */
+        
     }
 
     .link a {
         font-size: 14px;
+        display: none;
     }
 
     .btn {
@@ -630,8 +658,25 @@ margin-top: 5px;
     }
 
     .icons {
-        display: none;
+        display: block;
     }
+
+  
+
+    .icons {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        position: relative;
+        z-index: 1001;
+    }
+
+    .chotu {
+        top: 70px;
+        right: 15px;
+    }
+
+
 
     .header {
         min-height: auto;
@@ -739,6 +784,7 @@ margin-top: 5px;
         font-size: 15px;
         line-height: 1.8;
         margin-bottom: 20px;
+        margin-left: 0px;
     }
 
     .plans {
@@ -848,9 +894,19 @@ margin-top: 5px;
         <div class="btn">
             <button>Join Us</button>
         </div>
+
          <div class="icons">
-             <i class="fa-solid fa-phone"></i>
+             <!-- <i class="fa-solid fa-phone"></i> -->
             <i class="fa-solid fa-bars"></i>
+         </div>
+         <div class="chotu">
+            
+             <a href="#home">Home</a>
+            <a href="#service">Service</a>
+            <a href="#about">About Us</a>
+            <a href="#membership">Membership</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact</a>
          </div>
     </nav>
     <div class="header" id="home">
@@ -894,10 +950,7 @@ margin-top: 5px;
             <img src="https://cdn.shopify.com/s/files/1/0844/0751/7479/files/How_Meditation_Supports_Physical_Fitness_and_Mental_Health.jpg?v=1775199405">
             <p>Mind Relax</p>
         </div>
-        <!-- <div class="image">
-            <img src="https://www.ritfitsports.com/cdn/shop/articles/bench-shoulder-exercises-you-can-do-807541_69c1ab89-1d91-4684-ad6b-f23202da8ff7.jpg?v=1779153747&width=2048">
-            <p>Shoulder Workout</p>
-        </div> -->
+      
     </div>
     <div class="us" id="about">
         <h1>About <span>Us</span></h1>
@@ -1005,6 +1058,8 @@ margin-top: 5px;
 
         const prev = document.querySelector('#prev')
         const next = document.querySelector('#next')
+        const icon = document.querySelector('.icons')
+        const chotuHome = document.querySelector('.chotu')
         // const all = document.querySelector('.link a')
 
 
@@ -1030,7 +1085,13 @@ margin-top: 5px;
         ]
 
 
- 
+ icon.addEventListener('click',function(){
+    if(chotuHome.style.display === "block"){
+        chotuHome.style.display = "none"
+    }else{
+        chotuHome.style.display = "block"
+    }
+ })
 
 const all = document.querySelectorAll('.link a');
 
